@@ -1,0 +1,740 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(4 1fr);
+    grid-template-rows: repeat(8 auto);
+    grid-template-areas:
+        "header-logo header-logo header-datos header-datos"
+        "menues menues redes redes"
+        "banner banner banner banner"
+        "desc_title desc_title desc_title desc_title"
+        "img_plato img_plato about about"
+        "desc_title1 desc_title1 desc_title1 desc_title1"
+        "espc_div1 espc_div2 espc_div3 espc_div4"
+        "copyr copyr copyr copyr";
+
+}
+
+.header-logo {
+    grid-area: header-logo;
+    font-family: 'Rock Salt', cursive;
+    width: 100%;
+    text-align: left;
+    font-size: 1.5rem;
+    color: red;
+
+}
+
+.header-datos {
+    grid-area: header-datos;
+    background-color: red;
+    text-align: right;
+    color: white;
+    padding-top: 5px;
+    line-height: 40px;
+    padding-right: 30px;
+    font-size: 1.2rem;
+}
+
+.menues {
+    grid-area: menues;
+    display: flex;
+}
+
+.menues .menu_link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+}
+
+.menues .menu-item {
+    list-style: none;
+    padding: 20px;
+}
+
+.menues .menu-item:hover {
+    background-color: red;
+}
+
+.menu_select {
+    background-color: red;
+}
+
+.redes {
+    grid-area: redes;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.redes a {
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    color: black;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 50%;
+    background-color: white;
+    margin-right: 50px;
+}
+
+.menues01 {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    z-index: 2000;
+}
+
+.banner {
+    grid-area: banner;
+    position: relative;
+    z-index: -1000;
+}
+
+.imgbanner {
+    margin-top: -220px;
+    height: 1000px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1500;
+    top: 0;
+}
+
+.banner .contenido {
+    position: absolute;
+    z-index: 1600;
+    width: 90%;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translatex(-50%) translateY(-50%);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.desc_title {
+    grid-area: desc_title;
+    text-align: center;
+    margin: 20px auto;
+    font-size: 2.5rem;
+    font-family: 'Rock Salt', cursive;
+    color: #de423a;
+}
+
+.img_plato {
+    grid-area: img_plato;
+    padding: 20px 50px;
+}
+.img_plato:hover{
+    transform: scale(1.2);
+}
+
+.img_plato img {
+    width: 550px;
+    height: 400px;
+    object-fit: cover;
+    border: 10px solid #de423a;
+}
+
+.about {
+    grid-area: about;
+    padding: 20px 50px;
+}
+
+.about h3 {
+    font-family: 'Delius', cursive;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+.about p {
+    font-family: 'Delius', cursive;
+    text-align: justify;
+    font-size: 1.4rem;
+    line-height: 50px;
+}
+
+.about a {
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: #de423a;
+    height: 40px;
+    width: 200px;
+    font-size: 1.3rem;
+    line-height: 35px;
+}
+
+.platoss {
+    text-align: center;
+}
+
+.desc_title1 {
+    text-align: center;
+    margin: 20px auto;
+    font-size: 2.5rem;
+    font-family: 'Rock Salt', cursive;
+    color: #de423a;
+}
+
+.espc_div1 {
+    grid-area: espc_div1;
+}
+
+.espc_div2 {
+    grid-area: espc_div2;
+}
+
+.espc_div3 {
+    grid-area: espc_div3;
+}
+
+.espc_div4 {
+    grid-area: espc_div4;
+}
+
+.esp_img {
+    width: 350px;
+    height: 300px;
+    object-fit: cover;
+    margin: 20px auto;
+    border: 5px solid brown;
+}
+.esp_img:hover{
+    transform: scale(1.2);
+}
+
+.esp_descrip {
+    text-align: justify;
+    padding: 10px 30px;
+    margin-bottom: 20px;
+    font-family: 'Delius', cursive;
+}
+
+.esp_buton {
+    background-color: red;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.platoss h3 {
+    font-family: 'Delius', cursive;
+    font-size: 1.6rem;
+    color: #de423a;
+}
+
+.main {
+    margin-bottom: 50px;
+}
+
+.copyr {
+    grid-area: copyr;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.copyr p {
+    margin-bottom: 30px;
+}
+
+.copyr a {
+    padding: 10px;
+    background-color: #de423a;
+    color: white;
+}
+
+.footer {
+    margin-top: 30px;
+}
+
+/* -------------------------estilos Equipo-------------------------*/
+.team {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.team_1 {
+    width: 33%;
+    margin-bottom: 30px;
+}
+
+.img_equipo {
+    object-fit: cover;
+    height: 370px;
+    width: 370px;
+    border-radius: 50%;
+    border: 3px solid #de423a;
+    transition: all 3s;
+}
+.img_equipo:hover{
+    transform: rotate(45deg);
+}
+
+.boton {
+    display: block;
+    text-align: center;
+    height: 50px;
+    width: 300px;
+    margin: auto;
+    background-color: #de423a;
+    margin-bottom: 30px;
+}
+
+.boton a {
+    color: white;
+    line-height: 50px;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.titulo_equipo {
+    font-size: 1.5rem;
+    font-family: 'Rock Salt', cursive;
+    color: #de423a;
+}
+
+.desc_equipo {
+    text-align: justify;
+    padding: 20px;
+    font-family: 'Delius', cursive;
+
+}
+
+.team .team_1 {
+    align-items: flex-start;
+}
+
+/*-----------------------------------Estilos Galeria-----------------------------------*/
+.galeria {
+    width: 90%;
+    margin: 30px auto;
+}
+
+.newgaleria {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.newgaleria img {
+    height: 470px;
+    width: 470px;
+    object-fit: cover;
+    margin-bottom: 40px;
+    border: 5px solid #de423a;
+    opacity: 0.9;
+
+}
+
+.newgaleria img:hover {
+    transform: scale(1.2);
+    opacity: 1;
+
+}
+
+.newgale_box h2 {
+    text-align: center;
+    color: #de423a;
+    font-family: 'Rock Salt', cursive;
+}
+
+/*-----------------------------------Estilos contactanos-----------------------------------*/
+.formulario {
+    width: 90%;
+    margin: 30px auto;
+}
+
+.form {
+    margin: auto;
+    width: 50%;
+    border: 3px solid #de423a;
+    padding: 20px 40px;
+    border-radius: 30px;
+    line-height: 50px;
+}
+
+.form label,
+input {
+    display: block;
+}
+
+.form label {
+    font-size: 1.5rem;
+}
+
+.form input {
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+.form select {
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.form textarea {
+    min-width: 100%;
+    min-height: 200px;
+    max-height: 300px;
+    max-width: 100%;
+    margin-bottom: 30pxx;
+}
+
+.buton {
+    margin: auto;
+    text-align: center;
+    line-height: 50px;
+    width: 50%;
+    height: 7%;
+    background-color: red;
+}
+
+.buton a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+/*---------------------------------Estilos Comentarios---------------------------------*/
+.Comentarios {
+    width: 90%;
+    margin: auto;
+    display: flex;
+}
+
+.coment img {
+    object-fit: cover;
+    width: 49%;
+    transition: all 3s;
+}
+.coment img:hover{
+    transform: scale(1.1);
+    border-radius: 30px;
+    border: 2px solid #de423a;
+}
+
+
+@media screen and (max-width:1300px) {
+    .header-logo h1 {
+        font-size: 2.7rem;
+    }
+
+    .imgbanner {
+        margin-top: -250px;
+    }
+
+    .menu_link {
+        font-size: 1rem;
+    }
+
+    .redes a {
+        margin-right: 5px;
+    }
+
+    .imgbanner {
+        height: 700px;
+    }
+
+    .banner .contenido {
+        font-size: 1.6rem;
+    }
+
+    .about p {
+        line-height: 30px;
+        font-size: 1.2rem;
+    }
+
+    .container {
+        width: 90%;
+        display: grid;
+        margin: auto;
+        grid-template-columns: repeat(4 1fr);
+        grid-template-rows: repeat(9 auto);
+        grid-template-areas:
+            "header-logo header-logo header-datos header-datos"
+            "menues menues redes redes"
+            "banner banner banner banner"
+            "desc_title desc_title desc_title desc_title"
+            "img_plato img_plato about about"
+            "desc_title1 desc_title1 desc_title1 desc_title1"
+            "espc_div1 espc_div1 espc_div2 espc_div2"
+            "espc_div3 espc_div3 espc_div4 espc_div4"
+            "copyr copyr copyr copyr";
+
+    }
+
+    .platoss {
+        margin-bottom: 30px;
+    }
+
+    /*------------------------estilos Equipo responsive------------------------*/
+    .img_equipo {
+        width: 320px;
+        height: 320px;
+    }
+
+    .boton a {
+        font-size: 1.3rem;
+    }
+
+    /*-----------------------estilos contacatanos-----------------------*/
+    .form {
+        width: 70%;
+
+    }
+
+    /*-----------------------estilos comentarios-----------------------*/
+    .coment img {
+        width: 80%;
+    }
+
+    .coment {
+        text-align: center;
+    }
+
+
+}
+
+@media screen and (max-width:980px) {
+    .header-logo h1 {
+        font-size: 2rem;
+    }
+
+    .header-datos {
+        font-size: 1rem;
+    }
+
+    .container {
+        width: 90%;
+        display: grid;
+        margin: auto;
+        grid-template-columns: repeat(2 1fr);
+        grid-template-rows: repeat(11 auto);
+        grid-template-areas:
+            "header-logo  header-datos "
+            "menues menues"
+            "redes  redes"
+            "banner  banner"
+            "desc_title  desc_title"
+            "img_plato  img_plato"
+            "about about"
+            "desc_title1  desc_title1"
+            "espc_div1  espc_div2"
+            "espc_div3  espc_div4"
+            "copyr copyr";
+
+    }
+
+    .menues01 {
+        height: 105px;
+        background-color: rgba(0, 0, 0, 0.5);
+
+    }
+
+    .menues {
+        margin: auto;
+
+    }
+
+    .redes {
+        justify-content: space-evenly;
+        margin-top: 30px;
+    }
+
+    .imgbanner {
+        margin-top: 0;
+        height: 500px;
+    }
+
+    .desc_title {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .img_plato {
+        margin: auto;
+    }
+
+    /*------------------------estilos Equipo------------------------*/
+    .team_1 {
+        width: 50%;
+    }
+
+    .titulo_equipo {
+        font-size: 1.3rem;
+    }
+
+    /*--------------------------estilos contacatanos--------------------------*/
+    .form {
+        width: 70%;
+
+    }
+
+}
+
+@media screen and (max-width:780px) {
+    .container {
+        width: 90%;
+        display: grid;
+        margin: auto;
+        grid-template-columns: repeat(1 1fr);
+        grid-template-rows: repeat(13 auto);
+        grid-template-areas:
+            "header-logo"
+            "header-datos"
+            "menues"
+            "banner"
+            "desc_title"
+            "img_plato"
+            "about"
+            "desc_title1"
+            "espc_div1"
+            "espc_div2"
+            "espc_div3"
+            "espc_div4"
+            "copyr";
+
+    }
+
+    .header-logo {
+        text-align: center;
+
+    }
+
+    .img_plato img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+
+    .menues {
+        display: block;
+        height: 60px;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .menues:hover {
+        height: 320px;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .redes {
+        display: none;
+    }
+
+    .desc_title1 {
+        font-size: 1.4rem;
+    }
+
+    .menu-item {
+        width: 400px;
+    }
+
+    /*-------------------------------Estilos Equipo-------------------------------*/
+    .img_equipo {
+        height: 260px;
+        width: 260px;
+    }
+
+    /*-------------------------------Estilos galeria-------------------------------*/
+    .newgaleria img {
+        height: 400px;
+        width: 400px;
+    }
+
+    /*------------------------------Estilos Contactanos------------------------------*/
+    .form label {
+        font-size: 1.2rem;
+    }
+
+    .form input {
+        font-size: 0.9rem;
+        width: 100%;
+    }
+
+    .buton a {
+        font-size: 1.2rem;
+    }
+
+    .form {
+        padding: 30px;
+        line-height: 40px;
+    }
+
+    /*-------------------------------Estilos comentarios-------------------------------*/
+    .coment img{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:560px) {
+
+    .header-logo {
+        text-align: center;
+        background-color: #de423a;
+        color: white;
+    }
+
+    .header-datos {
+        text-align: center;
+        background-color: white;
+        color: #de423a;
+    }
+
+    .imgbanner {
+        height: 400px;
+    }
+
+    .menu-item {
+        width: auto;
+    }
+
+    .team_1 {
+        width: 100%;
+    }
+
+    .boton a {
+        font-size: 1.1rem;
+    }
+
+    /*-------------------------------Estilos galeria-------------------------------*/
+    .newgaleria img {
+        height: 350px;
+        width: 350px;
+    }
+
+    /*-----------------------------Estilos contactanos-----------------------------*/
+    .form {
+        padding: 20px;
+        line-height: 40px;
+    }
+
+}
